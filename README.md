@@ -52,7 +52,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate & Deploy Docs
-        uses: jadenisaac2005/ai-docs-action@v1 # This calls the action
+        uses: jadenisaac2005/ai-docs-action@v1.0.0 # This calls the action
         with:
           api_key: ${{ secrets.AI_API_KEY }}
           api_endpoint: ${{ secrets.AI_API_ENDPOINT }}
