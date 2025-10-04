@@ -1,0 +1,23 @@
+# action.yml
+name: 'AI Documentation Generator'
+description: 'Generates markdown documentation for a codebase using an AI model and deploys to GitHub Pages.'
+author: 'Jaden Isaac'
+
+inputs:
+  api_key:
+    description: 'The API key for the AI model endpoint.'
+    required: true
+  api_endpoint:
+    description: 'The URL for the AI model endpoint.'
+    required: true
+  model_name:
+    description: 'The name of the model to use in the API payload.'
+    required: true
+  source_dir:
+    description: 'The source directory containing the code to be documented.'
+    required: false
+    default: '.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
